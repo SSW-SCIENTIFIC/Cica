@@ -3,6 +3,7 @@ git clone https://github.com/SSW-SCIENTIFIC/Cica.git tmp
 cp -a tmp/.git Cica/
 cd Cica
 git checkout -t origin/unmod-alphabets
+git checkout -- .
 curl -L https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip -o hack.zip
 unar hack.zip
 cp ttf/* ./sourceFonts/
