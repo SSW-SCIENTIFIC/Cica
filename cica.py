@@ -449,31 +449,31 @@ def zero(_f):
     return _f
 
 def modify_WM(_f):
-    _f.selection.select(0x57)
-    _f.transform(psMat.scale(0.95, 1.0))
-    _f.copy()
-    _f.selection.select(0x4d)
-    _f.paste()
-    _f.transform(psMat.compose(psMat.rotate(math.radians(180)), psMat.translate(0, 627)))
-    for g in _f.selection.byGlyphs:
-        g = align_to_center(g)
+    # _f.selection.select(0x57)
+    # _f.transform(psMat.scale(0.95, 1.0))
+    # _f.copy()
+    # _f.selection.select(0x4d)
+    # _f.paste()
+    # _f.transform(psMat.compose(psMat.rotate(math.radians(180)), psMat.translate(0, 627)))
+    # for g in _f.selection.byGlyphs:
+        # g = align_to_center(g)
     return _f
 
 def modify_m(_f, _weight):
-    m = fontforge.open('./sourceFonts/m-Regular.sfd')
-    if _weight == 'Bold':
-        m.close()
-        m = fontforge.open('./sourceFonts/m-Bold.sfd')
-    m.selection.select(0x6d)
-    m.copy()
-    _f.selection.select(0x6d)
-    _f.paste()
-    for g in m.glyphs():
-        if g.encoding == 0x6d:
-            anchorPoints = g.anchorPoints
-    for g in _f.glyphs():
-        if g.encoding == 0x6d:
-            g.anchorPoints = anchorPoints
+    # m = fontforge.open('./sourceFonts/m-Regular.sfd')
+    # if _weight == 'Bold':
+        # m.close()
+        # m = fontforge.open('./sourceFonts/m-Bold.sfd')
+    # m.selection.select(0x6d)
+    # m.copy()
+    # _f.selection.select(0x6d)
+    # _f.paste()
+    # for g in m.glyphs():
+        # if g.encoding == 0x6d:
+            # anchorPoints = g.anchorPoints
+    # for g in _f.glyphs():
+        # if g.encoding == 0x6d:
+            # g.anchorPoints = anchorPoints
 
     return _f
 
