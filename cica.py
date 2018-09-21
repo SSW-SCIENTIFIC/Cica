@@ -409,18 +409,18 @@ def modify_iconsfordevs(_g):
     return _g
 
 def vertical_line_to_broken_bar(_f):
-    _f.selection.select(0x00a6)
-    _f.copy()
-    _f.selection.select(0x007c)
-    _f.paste()
+    # _f.selection.select(0x00a6)
+    # _f.copy()
+    # _f.selection.select(0x007c)
+    # _f.paste()
     return _f
 
 def emdash_to_broken_dash(_f):
-    _f.selection.select(0x006c)
-    _f.copy()
-    _f.selection.select(0x2014)
-    _f.pasteInto()
-    _f.intersect()
+    # _f.selection.select(0x006c)
+    # _f.copy()
+    # _f.selection.select(0x2014)
+    # _f.pasteInto()
+    # _f.intersect()
     return _f
 
 def mathglyph_to_double(_f):
@@ -441,16 +441,16 @@ def zenkaku_space(_f):
     return _f
 
 def zero(_f):
-    _f.selection.select(0x4f)
-    _f.copy()
-    _f.selection.select(0x30)
-    _f.paste()
-    _f.selection.select(0xb7)
-    _f.copy()
-    _f.selection.select(0x30)
-    _f.pasteInto()
-    for g in _f.selection.byGlyphs:
-        g = align_to_center(g)
+    # _f.selection.select(0x4f)
+    # _f.copy()
+    # _f.selection.select(0x30)
+    # _f.paste()
+    # _f.selection.select(0xb7)
+    # _f.copy()
+    # _f.selection.select(0x30)
+    # _f.pasteInto()
+    # for g in _f.selection.byGlyphs:
+        # g = align_to_center(g)
     return _f
 
 def modify_WM(_f):
