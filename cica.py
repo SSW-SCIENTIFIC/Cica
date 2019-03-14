@@ -427,17 +427,17 @@ def mathglyph_to_double(_f):
     pass
 
 def zenkaku_space(_f):
-    _f.selection.select(0x2610)
-    _f.copy()
-    _f.selection.select(0x3000)
-    _f.paste()
-    _f.selection.select(0x271a)
-    _f.copy()
-    _f.selection.select(0x3000)
-    _f.pasteInto()
-    _f.intersect()
-    for g in _f.selection.byGlyphs:
-        g = align_to_center(g)
+    # _f.selection.select(0x2610)
+    # _f.copy()
+    # _f.selection.select(0x3000)
+    # _f.paste()
+    # _f.selection.select(0x271a)
+    # _f.copy()
+    # _f.selection.select(0x3000)
+    # _f.pasteInto()
+    # _f.intersect()
+    # for g in _f.selection.byGlyphs:
+    #     g = align_to_center(g)
     return _f
 
 def zero(_f):
