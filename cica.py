@@ -594,7 +594,8 @@ def build_font(_f, emoji):
             # g.changeWeight(_f.get('hack_weight_reduce'), 'auto', 0, 0, 'auto')
             g.stroke("circular", _f.get('hack_weight_reduce'), 'butt', 'round', 'removeexternal')
         g = align_to_center(g)
-    hack = modify_m(hack, _f.get('weight_name'))
+    # hack = modify_m(hack, _f.get('weight_name'))
+    hack = hack
 
 
     alternate_expands = [
@@ -680,11 +681,11 @@ def build_font(_f, emoji):
         cica.paste()
 
     cica = fix_box_drawings_block_elements(cica)
-    cica = zenkaku_space(cica)
-    cica = zero(cica)
-    cica = modify_WM(cica)
-    cica = vertical_line_to_broken_bar(cica)
-    cica = emdash_to_broken_dash(cica)
+    # cica = zenkaku_space(cica)
+    # cica = zero(cica)
+    # cica = modify_WM(cica)
+    # cica = vertical_line_to_broken_bar(cica)
+    # cica = emdash_to_broken_dash(cica)
     cica = reiwa(cica, _f.get('weight_name'))
     cica = add_gopher(cica)
     cica = modify_ellipsis(cica)
